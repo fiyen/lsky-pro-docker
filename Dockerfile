@@ -38,7 +38,7 @@ COPY ./000-default.conf.template /etc/apache2/sites-enabled/
 COPY ./ports.conf.template /etc/apache2/
 COPY entrypoint.sh /
 WORKDIR /var/www/html/
-VOLUME /var/www/html
+# VOLUME /var/www/html
 ENV WEB_PORT 8089
 RUN chmod a+x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
